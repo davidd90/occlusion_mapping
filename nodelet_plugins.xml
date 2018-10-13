@@ -1,0 +1,13 @@
+<library path="lib/libocclusion_mapping_nodelet">
+  <class name="occlusion_mapping/GroundFilterNodelet" type="occlusion_mapping::GroundFilterNodelet" base_class_type="nodelet::Nodelet">
+    <description>
+      Nodelet for running the occlusion map
+    </description>
+  </class>
+ <class name="occlusion_mapping/OcclusionMapNodelet" type="occlusion_mapping::OcclusionMapNodelet" base_class_type="nodelet::Nodelet">
+    <description>
+      Nodelet for running the occlusion map
+    </description>
+  </class>
+</library>
+

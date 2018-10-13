@@ -1,0 +1,17 @@
+<launch>
+        <node pkg="occlusion_mapping" type="occlusion_map_node" name="occlusion_map" output="screen">
+                 <param name="resolution" value="0.5" />
+                <param name="frame_id" value="/base_link" />
+                <param name="vertical_angle_max" value="2.0" />
+                <param name="vertical_angle_min" value="-24.8" />
+                <param name="horizontal_angle_max" value="180" />
+                <param name="horizontal_angle_min" value="-180" />
+                <param name="publish_grid" value="true" />
+                <param name="filter_grid" value="false" />
+                <param name="mark_rays" value="false" />
+                <param name="grid_range" value="50.0" />
+		<param name="create_street_occlusion" value="true" />
+
+
+        </node>
+</launch>

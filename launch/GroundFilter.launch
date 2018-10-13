@@ -1,0 +1,5 @@
+<launch>
+        <node pkg="occlusion_mapping" type="groundFilter_node" name="groundFilter" output="screen">
+   	<param name="filter_Outliers" value="true" /> 
+        </node>
+</launch>

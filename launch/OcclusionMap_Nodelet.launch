@@ -1,0 +1,32 @@
+<launch>
+
+  <node pkg="nodelet" type="nodelet" name="nodelet_manager"  args="manager" output="screen" />
+
+
+ <node pkg="nodelet" type="nodelet" name="groundFilterFiltered_nodelet" args="load occlusion_mapping/GroundFilterNodelet nodelet_manager" 	   output="screen">
+   	<param name="filter_Outliers" value="true" /> 
+ </node>
+
+
+  <node pkg="nodelet" type="nodelet" name="occlusion_map_nodelet" args="load occlusion_mapping/OcclusionMapNodelet nodelet_manager" output="screen">
+                <param name="resolution" value="0.25" />
+                <param name="frame_id" value="/base_link" />
+                <param name="vertical_angle_max" value="2.0" />
+                <param name="vertical_angle_min" value="-24.8" />
+                <param name="horizontal_angle_max" value="180" />
+                <param name="horizontal_angle_min" value="-180" />
+                <param name="publish_grid" value="true" />
+                <param name="filter_grid" value="true" />
+                <param name="mark_rays" value="false" />
+                <param name="grid_range" value="50.0" />
+                <param name="grid_height" value="1.5" />
+                <remap from="occlusion_map_nodelet/depthimage" to="/sensors/velodyne_image/velodyne_depthimage" />
+
+
+          <remap from="occlusion_map_nodelet/occupied_cells_vis_marker" to="occupied_cells_vis_marker"/>
+          <remap from="occlusion_map_nodelet/free_cells_vis_marker" to="free_cells_vis_marker"/>
+
+        </node>
+
+  
+</launch>
