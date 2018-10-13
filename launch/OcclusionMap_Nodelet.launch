@@ -19,7 +19,7 @@
                 <param name="filter_grid" value="true" />
                 <param name="mark_rays" value="false" />
                 <param name="grid_range" value="50.0" />
-                <param name="grid_height" value="1.5" />
+                <param name="grid_height" value="1.0" />
                 <remap from="occlusion_map_nodelet/depthimage" to="/sensors/velodyne_image/velodyne_depthimage" />
 
 
